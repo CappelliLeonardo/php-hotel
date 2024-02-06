@@ -96,7 +96,14 @@
                         <tr>
                             <th scope="row"> <?php echo $hotel['name'];?> </th>
                             <td><?php echo $hotel['description'];?></td>
-                            <td><?php echo $hotel['parking'];?></td>
+                            <td><?php
+                                if($hotel['parking'] == true){
+                                    echo 'avaiable';
+                                }
+                                else{
+                                    echo 'not avaiable';
+                                }
+                                ?></td>
                             <td><?php echo $hotel['vote']. '<i class="fa-solid fa-star"></i>';?></td>
                             <td><?php echo $hotel['distance_to_center'].' km';?></td>
                         </tr>
