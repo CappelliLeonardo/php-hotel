@@ -25,46 +25,45 @@
 <body>
 
 <?php
+$hotels = [
 
-    $hotels = [
+    [
+        'name' => 'Hotel Belvedere',
+        'description' => 'Hotel Belvedere',
+        'parking' => true,
+        'vote' => 4,
+        'distance_to_center' => 10.4
+    ],
+    [
+        'name' => 'Hotel Futuro',
+        'description' => 'Hotel Futuro',
+        'parking' => true,
+        'vote' => 2,
+        'distance_to_center' => 2
+    ],
+    [
+        'name' => 'Hotel Rivamare',
+        'description' => 'Hotel Rivamare',
+        'parking' => false,
+        'vote' => 1,
+        'distance_to_center' => 1
+    ],
+    [
+        'name' => 'Hotel Bellavista',
+        'description' => 'Hotel Bellavista',
+        'parking' => false,
+        'vote' => 5,
+        'distance_to_center' => 5.5
+    ],
+    [
+        'name' => 'Hotel Milano',
+        'description' => 'Hotel Milano',
+        'parking' => true,
+        'vote' => 2,
+        'distance_to_center' => 50
+    ],
 
-        [
-            'name' => 'Hotel Belvedere',
-            'description' => 'Hotel Belvedere Descrizione',
-            'parking' => true,
-            'vote' => 4,
-            'distance_to_center' => 10.4
-        ],
-        [
-            'name' => 'Hotel Futuro',
-            'description' => 'Hotel Futuro Descrizione',
-            'parking' => true,
-            'vote' => 2,
-            'distance_to_center' => 2
-        ],
-        [
-            'name' => 'Hotel Rivamare',
-            'description' => 'Hotel Rivamare Descrizione',
-            'parking' => false,
-            'vote' => 1,
-            'distance_to_center' => 1
-        ],
-        [
-            'name' => 'Hotel Bellavista',
-            'description' => 'Hotel Bellavista Descrizione',
-            'parking' => false,
-            'vote' => 5,
-            'distance_to_center' => 5.5
-        ],
-        [
-            'name' => 'Hotel Milano',
-            'description' => 'Hotel Milano Descrizione',
-            'parking' => true,
-            'vote' => 2,
-            'distance_to_center' => 50
-        ],
-
-    ];
+];
 ?>
 
 
@@ -79,6 +78,32 @@
 
     <main>
         <div class="container">
+
+        <div class="form-check" action="" method="GET">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+            <label class="form-check-label" for="exampleRadios1">
+                Avaiable parking
+            </label>
+            </div>
+            <div class="form-check" action="" method="GET">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+                Not avaible parking
+            </label>
+        </div>
+
+        <form action="" method="GET">
+            <div>
+                <textarea name="inputUser" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <input type="text" name="badWords">
+            </div>
+            <button>
+                Invia
+            </button>
+        </form>
+
             <table class="table">
                 <thead>
                     <tr>
@@ -97,6 +122,10 @@
                             <th scope="row"> <?php echo $hotel['name'];?> </th>
                             <td><?php echo $hotel['description'];?></td>
                             <td><?php
+                                if ($inputUser == 'option2') {
+                                    
+                                }
+                                
                                 if($hotel['parking'] == true){
                                     echo 'avaiable';
                                 }
