@@ -79,7 +79,7 @@ $hotels = [
     <main>
         <div class="container">
 
-        <div class="form-check" action="" method="GET">
+        <!-- <div class="form-check" action="" method="GET">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
             <label class="form-check-label" for="exampleRadios1">
                 Avaiable parking
@@ -90,9 +90,9 @@ $hotels = [
             <label class="form-check-label" for="exampleRadios2">
                 Not avaible parking
             </label>
-        </div>
+        </div> -->
 
-        <form action="" method="GET">
+        <!-- <form action="" method="GET">
             <div>
                 <textarea name="inputUser" id="" cols="30" rows="10"></textarea>
             </div>
@@ -102,7 +102,7 @@ $hotels = [
             <button>
                 Invia
             </button>
-        </form>
+        </form> -->
 
             <table class="table">
                 <thead>
@@ -122,9 +122,9 @@ $hotels = [
                             <th scope="row"> <?php echo $hotel['name'];?> </th>
                             <td><?php echo $hotel['description'];?></td>
                             <td><?php
-                                if ($inputUser == 'option2') {
+                                // if ($inputUser == 'option2') {
                                     
-                                }
+                                // }
                                 
                                 if($hotel['parking'] == true){
                                     echo 'avaiable';
