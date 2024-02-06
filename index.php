@@ -67,30 +67,45 @@
     ];
 ?>
 
-<ul>
-    <?php
-        foreach($hotels as $hotel) {
-    ?>
-        <li>
-            <?php echo $hotel['name'].' - '.$hotel['description']; ?>
-            |
-            <?php echo $hotel['parking'].'-'.$hotel['vote']; ?>
-            <?php echo $hotel['distance_to_center']; ?>
 
-        </li>
-    <?php
-        }
-    ?>
-</ul>
 
     <header>
-        <h1>
-            PHP-HOTEL
-        </h1>
+        <div class="container">
+            <h1>
+                PHP-HOTEL
+            </h1>
+        </div>
     </header>
 
     <main>
-
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Parking</th>
+                    <th scope="col">Vote</th>
+                    <th scope="col">Distance to center</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        foreach ($hotels as $hotel) {
+                    ?>
+                        <tr>
+                            <th scope="row"> <?php echo $hotel['name'];?> </th>
+                            <td><?php echo $hotel['description'];?></td>
+                            <td><?php echo $hotel['parking'];?></td>
+                            <td><?php echo $hotel['vote']. '<i class="fa-solid fa-star"></i>';?></td>
+                            <td><?php echo $hotel['distance_to_center'].' km';?></td>
+                        </tr>
+                    <?php
+                        }
+                    ?> 
+                </tbody>
+            </table>
+        </div>
     </main>
 </body>
 </html>
